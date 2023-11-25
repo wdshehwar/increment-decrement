@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1 in Javascript</title>
+    <style>
+    
+        td{
+            text-align: center; font-size: 30px;
+            background-color: cadetblue;
+            color:darkred;
+        }
+    </style>
+</head>
+<body id="bg">
+    <h1 align="center">Select Quantity Project</h1> <hr>
+    <table border="1" align="center" cellspacing="10" cellpadding="10" width="15%">
+        <tr>
+            <td id="minus" onclick="minus()">-</td>
+            <td id="number">1</td>
+            <td id="plus" onclick="plus()">+</td>
+        </tr>
+    </table>
+
+    <script>
+        let num = 1;
+        function plus(){
+            if(num<=4){
+                num++;
+            document.getElementById('number').innerText = num;
+            }
+            if(num==5){
+                document.getElementById('plus').style.cursor = 'not-allowed';
+            }
+        }
+
+        function minus(){
+            if(num>1){
+                num--;
+            document.getElementById('number').innerText = num;
+            }
+            if(num==1){
+                document.getElementById('minus').style.cursor = 'not-allowed';
+                document.getElementById('minus').style.background = 'silver';
+            }                                                                                                                                                                                                                                                                                                                                                                           
+        }             
+    </script>
+</body>
+</html>
